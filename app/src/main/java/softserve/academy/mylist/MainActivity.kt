@@ -497,19 +497,3 @@ fun EditItemDialog(
         }
     )
 }
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun ShoppingListScreenPreview() {
-    ShoppingListScreen()
-}
-
-@Composable
-fun ShoppingItemCardPreview() {
-    var toggleState by remember { mutableStateOf(false) }
-    ShoppingItemCard(
-        ShoppingItem("Молоко", isBought = toggleState)
-    ) {
-        toggleState = !toggleState
-    }
-}
